@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.skreep.myworkoapp.R
+import com.skreep.myworkoapp.databinding.ActivityMainBinding
 import com.skreep.myworkoapp.model.WorkoutData
 
 class WorkoutAdapter(var workoutList: ArrayList<WorkoutData>
@@ -15,6 +16,7 @@ class WorkoutAdapter(var workoutList: ArrayList<WorkoutData>
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutViewHolder {
+
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_workout,
             parent,false)
         return WorkoutViewHolder(itemView)
