@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">myworkoapp</string>
+    <string name="app_name">Worko.</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="welcome_description">Выберайте упражнения и начните тренеровку
+прямо сейчас</string>
+    <string name="name_detail">Worko Easily </string>
 </resources>
