@@ -30,7 +30,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="20dp"
-                android:textColor="@color/dark"
+                android:textColor="@color/gray"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:paddingLeft="20dp"
-                android:textColor="@color/dark"
+                android:textColor="@color/gray"
                 android:textSize="12sp"
 
                 app:layout_constraintBottom_toBottomOf="parent"

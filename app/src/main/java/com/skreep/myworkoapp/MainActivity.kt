@@ -8,6 +8,7 @@ import com.google.firebase.database.*
 import com.skreep.myworkoapp.adapter.WorkoutAdapter
 import com.skreep.myworkoapp.model.WorkoutData
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_workout.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         userArrayList = arrayListOf<WorkoutData>()
         getUserData()
+
+
 
     }
 
