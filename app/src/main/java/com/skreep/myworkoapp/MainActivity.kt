@@ -1,5 +1,6 @@
 package com.skreep.myworkoapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,13 +9,12 @@ import com.google.firebase.database.*
 import com.skreep.myworkoapp.adapter.WorkoutAdapter
 import com.skreep.myworkoapp.model.WorkoutData
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_workout.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var dbref : DatabaseReference
-    private lateinit var userRecyclerview : RecyclerView
-    private lateinit var userArrayList : ArrayList<WorkoutData>
+    private lateinit var dbref: DatabaseReference
+    private lateinit var userRecyclerview: RecyclerView
+    private lateinit var userArrayList: ArrayList<WorkoutData>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,8 +26,10 @@ class MainActivity : AppCompatActivity() {
         userRecyclerview.setHasFixedSize(true)
 
         userArrayList = arrayListOf<WorkoutData>()
-        getUserData()
 
+
+        getUserData()
+        infoClick()
 
 
     }
@@ -36,13 +38,13 @@ class MainActivity : AppCompatActivity() {
 
         dbref = FirebaseDatabase.getInstance().getReference("Workout")
 
-        dbref.addValueEventListener(object : ValueEventListener{
+        dbref.addValueEventListener(object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                if (snapshot.exists()){
+                if (snapshot.exists()) {
 
-                    for (userSnapshot in snapshot.children){
+                    for (userSnapshot in snapshot.children) {
 
 
                         val user = userSnapshot.getValue(WorkoutData::class.java)
@@ -64,5 +66,13 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+    }
+
+    fun infoClick() {
+        info.setOnClickListener {
+            val intent = Intent(this, InfoActivity::class.java)
+            startActivity(intent)
+
+        }
     }
 }
