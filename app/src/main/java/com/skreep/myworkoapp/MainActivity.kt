@@ -7,19 +7,20 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.skreep.myworkoapp.adapter.WorkoutAdapter
+import com.skreep.myworkoapp.databinding.ActivityMainBinding
 import com.skreep.myworkoapp.model.WorkoutData
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var dbref: DatabaseReference
     private lateinit var userRecyclerview: RecyclerView
     private lateinit var userArrayList: ArrayList<WorkoutData>
-
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         userRecyclerview = findViewById(R.id.recyclerworkoutList)
         userRecyclerview.layoutManager = LinearLayoutManager(this)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
 
         getUserData()
-        infoClick()
+        infoListener()
 
 
     }
@@ -57,10 +58,12 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
+
             }
 
+
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
 
 
@@ -68,11 +71,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun infoClick() {
-        info.setOnClickListener {
+    //функция отвечает за обработчик ic_info
+
+    private fun infoListener() {
+        binding.info.setOnClickListener {
             val intent = Intent(this, InfoActivity::class.java)
             startActivity(intent)
 
         }
+
     }
 }

@@ -11,4 +11,5 @@
     <color name="bg_card">#30384B</color>
     <color name="spring_green_color">#24B898</color>
     <color name="gray">#EFEFEF</color>
+    <color name="desc_gray">#606169</color>
 </resources>
