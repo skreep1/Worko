@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     tools:context=".SplashActivity">
 
     <androidx.cardview.widget.CardView
 
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:layout_margin="5dp"
         android:backgroundTint="@color/background"
         app:cardElevation="0dp"
         tools:ignore="MissingConstraints">
 
-        <View
-            android:layout_width="match_parent"
-            android:background="@color/desc_gray"
-            android:layout_height="1sp"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -32,30 +27,27 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/workout_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto_bold"
                 android:paddingHorizontal="20dp"
                 android:text="name"
-                android:textColor="@color/gray"
-                android:textSize="14sp"
+                android:textColor="@color/bg_tint"
+                android:textSize="20sp"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/workout_description"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="44dp"
+                android:layout_margin="20dp"
                 android:fontFamily="@font/roboto"
                 android:lineSpacingExtra="5dp"
-                android:paddingHorizontal="20dp"
                 android:text="description"
-                android:textColor="@color/desc_gray"
-                android:textSize="11sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                tools:layout_editor_absoluteX="0dp" />
+                android:textColor="@color/gray"
+                android:textSize="11sp" />
 
 
             <androidx.cardview.widget.CardView
@@ -63,9 +55,7 @@
                 android:layout_height="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="@color/bg_card"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                android:backgroundTint="@color/bg_card">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/workout_time"
@@ -89,9 +79,9 @@
             </androidx.cardview.widget.CardView>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

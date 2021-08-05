@@ -22,7 +22,7 @@
                 android:src="@drawable/ic_back"
                 android:layout_margin="30dp">
 
-                </ImageView>
+            </ImageView>
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/app_name"
