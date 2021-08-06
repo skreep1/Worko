@@ -15,12 +15,13 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:id="@+id/back_ic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_back"
-                android:layout_margin="30dp">
+                android:layout_margin="30dp"
+                android:src="@drawable/ic_back">
 
             </ImageView>
 
@@ -28,12 +29,72 @@
                 android:id="@+id/app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="30dp"
                 android:layout_gravity="center"
+                android:layout_margin="30dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/info"
                 android:textColor="@color/gray"
                 android:textSize="18sp" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="50dp"
+                android:src="@drawable/info_img">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/info_title"
+                android:textSize="24sp">
+
+            </com.google.android.material.textview.MaterialTextView>
+
         </FrameLayout>
     </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/roboto"
+        android:lineSpacingExtra="8dp"
+        android:text="@string/info_desc"
+        android:textSize="14sp">
+
+
+    </com.google.android.material.textview.MaterialTextView>
+
 </LinearLayout>
