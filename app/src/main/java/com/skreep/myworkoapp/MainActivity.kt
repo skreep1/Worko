@@ -9,6 +9,8 @@ import com.google.firebase.database.*
 import com.skreep.myworkoapp.adapter.WorkoutAdapter
 import com.skreep.myworkoapp.databinding.ActivityMainBinding
 import com.skreep.myworkoapp.model.WorkoutData
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
