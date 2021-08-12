@@ -67,34 +67,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="@string/info_title"
-                android:textSize="24sp">
-
-            </com.google.android.material.textview.MaterialTextView>
-
-        </FrameLayout>
     </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:fontFamily="@font/roboto"
-        android:lineSpacingExtra="8dp"
-        android:text="@string/info_desc"
-        android:textSize="14sp">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/info_desc"
+            android:textSize="14sp">
 
 
-    </com.google.android.material.textview.MaterialTextView>
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="@string/app_name"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/spring_green_color"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            >
+
+        </com.google.android.material.textview.MaterialTextView>
+
+    </FrameLayout>
+
 
 </LinearLayout>
