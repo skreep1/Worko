@@ -9,11 +9,11 @@ Exercise helps you think better, is healthy and keeps the body fit, but how can 
 
 # Technology
 1. Kotlin
-2. ViewData
+2. ViewBinding
 3. Firebase
 4. Figma (design)
 
-# Donate
+# Subscribe
 How to give thanks?
 You can subscribe to my social networks:
 1. [Instagram](http://instagram.com/skreep1/ "Instagram") 
